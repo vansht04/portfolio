@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="floating-shape shape2"></div>
       </section>
 
-      <footer>© 2026 Your Name</footer>
+      <footer>© 2026 Vansh Tejnani</footer>
     </>
   );
 }
