@@ -28,7 +28,7 @@ export default function HomePage() {
             alt="Profile"
             className="profile-pic"
           />
-          <h1>Hi, I'm Your Name</h1>
+          <h1>Hi, I'm Vansh Tejnani</h1>
           <p>Software Engineer • Creator • Innovator</p>
           <a
             href="/assets/resume.pdf"
