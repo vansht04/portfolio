@@ -1,15 +1,22 @@
+"use client";
+
+import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
+
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1>Your Name</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/resume.pdf" target="_blank">Resume</a></li>
-      </ul>
+      <Link href="/" className="logo">
+        YourName.dev
+      </Link>
+
+      <div className="nav-right">
+        <Link href="/about">About</Link>
+        <Link href="/projects">Projects</Link>
+        <Link href="/resume">Resume</Link>
+        <Link href="/contact">Contact</Link>
+        <ThemeToggle />
+      </div>
     </nav>
   );
 }
