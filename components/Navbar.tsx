@@ -4,7 +4,7 @@ import ThemeToggle from "./ThemeToggle";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <a href="/" className="logo">YourName.dev</a>
+      <a href="/" className="logo">Vansh Tejnani</a>
       <div className="nav-right">
         <a href="/about" target="_blank" rel="noopener noreferrer" className="nav-link">About</a>
         <a href="/projects" target="_blank" rel="noopener noreferrer" className="nav-link">Projects</a>

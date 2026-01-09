@@ -1,3 +1,3 @@
 export default function Footer() {
-  return <footer className="footer">© {new Date().getFullYear()} Your Name. All rights reserved.</footer>;
+  return <footer className="footer">© {new Date().getFullYear()} Vansh Tejnani. All rights reserved.</footer>;
 }
