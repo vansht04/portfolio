@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 export const metadata = {
   title: "Your Name | Software Engineer",
   description: "Software Engineer Portfolio",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

@@ -8,7 +8,7 @@ export default function Home() {
           <Image src="/profile.jpg" alt="Profile" width={300} height={300} className="profile" />
         </div>
         <div className="hero-text">
-          <h1>Vansh Tejnani</h1>
+          <h1>Your Name</h1>
           <p className="hero-subtitle">Software Engineer</p>
           <p className="hero-description">
             Building scalable and modern web applications with clean code and great UX.

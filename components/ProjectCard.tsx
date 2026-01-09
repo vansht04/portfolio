@@ -1,11 +1,19 @@
-type Props = { title: string; description: string; link: string };
+"use client";
+import Image from "next/image";
 
-export default function ProjectCard({ title, description, link }: Props) {
+export default function SocialLinks() {
   return (
-    <div className="project-card">
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <a href={link} target="_blank" rel="noopener noreferrer" className="project-link">View →</a>
+    <div className="socials">
+      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        <div className="icon-container">
+          <Image src="/github.svg" alt="GitHub" width={32} height={32} style={{ objectFit: "contain" }} />
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+        <div className="icon-container">
+          <Image src="/linkedin.svg" alt="LinkedIn" width={32} height={32} style={{ objectFit: "contain" }} />
+        </div>
+      </a>
     </div>
   );
 }
