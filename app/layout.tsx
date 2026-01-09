@@ -4,22 +4,18 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
 export const metadata = {
-  title: "Vansh Tejnani | Portfolio",
+  title: "Your Name | Software Engineer",
   description: "Software Engineer Portfolio",
-  icons: { icon: "/favicon.png" },
+  icons: { icon: "/favicon.ico" },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
         <ThemeProvider>
           <Navbar />
-          <main className="container">{children}</main>
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

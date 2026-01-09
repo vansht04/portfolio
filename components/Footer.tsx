@@ -1,7 +1,3 @@
 export default function Footer() {
-  return (
-    <footer>
-      © 2026 Vansh Tejnani
-    </footer>
-  );
+  return <footer className="footer">© {new Date().getFullYear()} Vansh Tejnani. All rights reserved.</footer>;
 }

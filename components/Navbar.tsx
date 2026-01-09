@@ -1,20 +1,16 @@
 "use client";
-
-import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <Link href="/" className="logo">
-        YourName.dev
-      </Link>
-
+      <a href="/" className="logo">YourName.dev</a>
       <div className="nav-right">
-        <Link href="/about">About</Link>
-        <Link href="/projects">Projects</Link>
-        <Link href="/resume">Resume</Link>
-        <Link href="/contact">Contact</Link>
+        <a href="/about" target="_blank" rel="noopener noreferrer" className="nav-link">About</a>
+        <a href="/projects" target="_blank" rel="noopener noreferrer" className="nav-link">Projects</a>
+        <a href="/skills" target="_blank" rel="noopener noreferrer" className="nav-link">Skills</a>
+        <a href="/resume" target="_blank" rel="noopener noreferrer" className="nav-link">Resume</a>
+        <a href="/contact" target="_blank" rel="noopener noreferrer" className="nav-link">Contact</a>
         <ThemeToggle />
       </div>
     </nav>

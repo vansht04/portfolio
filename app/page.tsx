@@ -2,26 +2,22 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="hero">
-      <div>
-        <h1>Vansh Tejnani</h1>
-        <h2>Software Engineer</h2>
-        <p>
-          I build clean, scalable, and production-ready web applications.
-        </p>
-
-        <a href="/resume.pdf" target="_blank" className="btn-primary">
-          View Resume
-        </a>
+    <section id="home" className="hero-section">
+      <div className="hero-container">
+        <div className="hero-image">
+          <Image src="/profile.jpg" alt="Profile" width={300} height={300} className="profile" />
+        </div>
+        <div className="hero-text">
+          <h1>Vansh Tejnani</h1>
+          <p className="hero-subtitle">Software Engineer</p>
+          <p className="hero-description">
+            Building scalable and modern web applications with clean code and great UX.
+          </p>
+          <div className="hero-buttons">
+            <a href="/resume.pdf" target="_blank" className="btn-primary">View Resume</a>
+          </div>
+        </div>
       </div>
-
-      <Image
-        src="/profile.jpg"
-        alt="Vansh Tejnani"
-        width={300}
-        height={300}
-        className="profile-img"
-      />
     </section>
   );
 }
