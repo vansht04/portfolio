@@ -4,9 +4,9 @@ import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 
 export const metadata = {
-  title: "Your Name | Software Engineer",
-  description: "Software Engineer Portfolio",
-  icons: { icon: "/favicon.png" },
+  title: "Vansh Tejnani | Portfolio",
+  description: "Vansh's Portfolio",
+  icons: { icon: "/favicon.jpg" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
