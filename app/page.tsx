@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
 
         {/* Hero Text */}
         <div className="hero-text">
-          <h1>Hey, I'm Vansh Tejnani!</h1>
+          <h1>Hey, I'm Vansh Tejnani!</h1> 
           <p className="hero-subtitle">Aspiring Software Developer</p>
           <p className="hero-description">
             I specialize in building scalable, high-quality web applications
@@ -28,23 +29,20 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons">
+            {/* Resume button stays opening in a new tab */}
             <a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary"
+              className="btn-secondary"
             >
               View Resume
             </a>
 
-            <a
-              href="/projects"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary"
-            >
+            {/* Projects button opens in the same tab now */}
+            <Link href="/projects" className="btn-secondary">
               View Projects
-            </a>
+            </Link>
           </div>
         </div>
       </div>

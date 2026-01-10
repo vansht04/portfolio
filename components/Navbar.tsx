@@ -1,16 +1,24 @@
 "use client";
+import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <a href="/" className="logo">Vansh Tejnani</a>
+      {/* Logo */}
+      <Link href="/" className="logo">Vansh Tejnani</Link> 
+
       <div className="nav-right">
-        <a href="/about" target="_blank" rel="noopener noreferrer" className="nav-link">About</a>
-        <a href="/projects" target="_blank" rel="noopener noreferrer" className="nav-link">Projects</a>
-        <a href="/skills" target="_blank" rel="noopener noreferrer" className="nav-link">Skills</a>
-        <a href="/resume" target="_blank" rel="noopener noreferrer" className="nav-link">Resume</a>
-        <a href="/contact" target="_blank" rel="noopener noreferrer" className="nav-link">Contact</a>
+        {/* All links open in the same tab except Resume button on homepage */}
+        <Link href="/about" className="nav-link">About</Link>
+        <Link href="/projects" className="nav-link">Projects</Link>
+        <Link href="/skills" className="nav-link">Skills</Link>
+
+        {/* Resume tab now opens the Resume page in the same tab */}
+        <Link href="/resume" className="nav-link">Resume</Link>
+
+        <Link href="/contact" className="nav-link">Contact</Link>
+
         <ThemeToggle />
       </div>
     </nav>

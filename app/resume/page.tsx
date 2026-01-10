@@ -1,8 +1,16 @@
-export default function Resume() {
+export default function ResumePage() {
   return (
-    <section id="resume" className="section">
+    <section className="section">
       <h1>Resume</h1>
-      <a href="/resume.pdf" download className="btn-primary">Download Resume</a>
+      <p>Feel free to download a copy of my resume below</p>
+
+      <a
+        href="/resume.pdf"
+        download
+        className="btn-secondary"
+      >
+        Download Resume
+      </a>
     </section>
   );
 }
