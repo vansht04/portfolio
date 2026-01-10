@@ -12,7 +12,10 @@ export default function Navbar() {
         <Link href="/about" className="nav-link">About</Link>
         <Link href="/projects" className="nav-link">Projects</Link>
         <Link href="/skills" className="nav-link">Skills</Link>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">Resume</a>
+
+        {/* Change Resume link to go to /resume instead of directly downloading */}
+        <Link href="/resume" className="nav-link">Resume</Link>
+
         <Link href="/contact" className="nav-link">Contact</Link>
         <ThemeToggle />
       </div>

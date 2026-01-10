@@ -1,13 +1,12 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <section id="home" className="hero-section fade-up">
+    <section id="home" className="hero-section">
       <div className="hero-container">
-        {/* Profile Image */}
-        <div className="hero-image">
+        {/* Profile Image Wrapper */}
+        <div className="hero-image fade-up">
           <div className="profile-wrapper">
             <Image
               src="/pfp.jpg"
@@ -30,7 +29,7 @@ export default function Home() {
           </p>
 
           <div className="hero-buttons fade-up">
-            {/* Resume button stays opening in a new tab */}
+            {/* Homepage: opens PDF directly */}
             <a
               href="/resume.pdf"
               target="_blank"
@@ -40,7 +39,7 @@ export default function Home() {
               View Resume
             </a>
 
-            {/* Projects button opens in the same tab */}
+            {/* Projects button opens in same tab */}
             <Link href="/projects" className="btn-secondary">
               View Projects
             </Link>
