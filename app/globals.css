@@ -41,7 +41,7 @@ body {
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 2rem; /* spacing between tabs */
+  gap: 2rem;
 }
 
 .nav-link {
@@ -56,7 +56,7 @@ body {
 }
 
 /* ======================= */
-/*      THEME TOGGLE        */
+/*      THEME TOGGLE       */
 /* ======================= */
 
 .theme-toggle {
@@ -82,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(135deg,#1f2937,#111827);
+  background: linear-gradient(135deg, #1f2937, #111827);
   padding: 4rem 2rem;
 }
 
@@ -93,9 +93,27 @@ body {
   flex-wrap: wrap;
 }
 
+/* Profile Image Wrapper */
+.profile-wrapper {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* always circular */
+  overflow: hidden;   /* ensures any image is clipped to circle */
+}
+
 .hero-image img,
 .profile {
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills wrapper, preserves aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: slight zoom + glow */
+.hero-image img:hover,
+.profile:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
 }
 
 .hero-text {
@@ -119,26 +137,118 @@ body {
   line-height: 1.5;
 }
 
+.hero-buttons {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
 .hero-buttons a {
-  text-decoration: none; /* remove underline */
+  text-decoration: none;
 }
 
 /* ======================= */
 /*         BUTTONS         */
 /* ======================= */
 
-.btn-primary {
-  background: #38bdf8;
-  color: black;
+.btn-primary,
+.btn-secondary {
   padding: 0.9rem 1.8rem;
   border-radius: 8px;
   font-weight: bold;
-  transition: all 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
 }
 
-.btn-primary:hover {
+/* Primary button */
+.btn-primary {
+  background: #38bdf8;
+  color: black;
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: transparent;
+  border: 2px solid #38bdf8;
+  color: #38bdf8;
+}
+
+/* Hover effect for buttons */
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-2px) scale(1.05);
   box-shadow: 0 0 15px #38bdf8;
-  transform: translateY(-2px);
+}
+
+/* Press effect for mobile/touch */
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 0 8px #38bdf8;
+}
+
+/* ======================= */
+/*       RESPONSIVE HERO    */
+/* ======================= */
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%; /* full width for tiny screens */
+    padding: 1rem 0;
+    font-size: 1rem;
+  }
+
+  .profile-wrapper {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 /* ======================= */
