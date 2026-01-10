@@ -36,6 +36,16 @@ body {
   font-size: 1.5rem;
   color: #38bdf8;
   text-decoration: none;
+  transition: all 0.3s ease;
+  /* ensure background stays transparent */
+  background: transparent;
+}
+
+.logo:hover {
+  transform: translateY(-2px) scale(1.05);
+  /* glow only, no background color */
+  text-shadow: 0 0 8px #38bdf8, 0 0 15px #38bdf8, 0 0 20px #38bdf8;
+  color: #38bdf8;
 }
 
 .nav-right {
