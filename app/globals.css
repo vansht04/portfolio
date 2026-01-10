@@ -357,32 +357,51 @@ body {
 /*        PROJECTS         */
 /* ======================= */
 
-.project-scroll {
+.about-cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 2rem 0;
+  justify-content: center;
 }
 
-.project-card {
-  min-width: 280px;
+.about-card {
   background: rgba(56, 189, 248, 0.1);
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 12px;
-  scroll-snap-align: start;
+  width: 280px;
+  text-align: center; /* Ensures the text inside the card is centered */
   transition: all 0.3s;
 }
 
-.project-card:hover {
+.about-card:hover {
   box-shadow: 0 0 20px #38bdf8;
   transform: translateY(-5px);
 }
 
+.about-card h2 {
+  font-size: 1.3rem;
+  color: #e5e7eb;
+  margin-bottom: 1rem; /* Add margin to space it out from description */
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
 .project-link {
-  color: #38bdf8;
+  display: block;
+  margin-top: 1rem;
   font-weight: bold;
-  text-decoration: none;
+  color: #38bdf8;
+  text-decoration: underline;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.project-link:hover {
+  color: #0ea5e9;
+  transform: scale(1.05);
 }
 
 /* ======================= */
