@@ -1,19 +1,18 @@
 "use client";
-import Image from "next/image";
+import Link from "next/link";
 
-export default function SocialLinks() {
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+export default function ProjectCard({ title, description, link }: ProjectCardProps) {
   return (
-    <div className="socials">
-      <a href="https://github.com/vansht04" target="_blank" rel="noopener noreferrer">
-        <div className="icon-container">
-          <Image src="/github.png" alt="GitHub" width={32} height={32} style={{ objectFit: "contain" }} />
-        </div>
-      </a>
-      <a href="https://linkedin.com/in/vansh-tejnani" target="_blank" rel="noopener noreferrer">
-        <div className="icon-container">
-          <Image src="/linkedin.png" alt="LinkedIn" width={32} height={32} style={{ objectFit: "contain" }} />
-        </div>
-      </a>
+    <div className="project-card fade-up">
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <Link href={link} className="project-link">View Project</Link>
     </div>
   );
 }

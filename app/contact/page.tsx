@@ -11,7 +11,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section fade-up">
       <h1>Contact</h1>
       {!submitted ? (
         <form onSubmit={handleSubmit} className="contact-form">

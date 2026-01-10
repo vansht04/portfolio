@@ -1,3 +1,5 @@
+"use client";
+
 export default function Skills() {
   const skills = [
     { name: "JavaScript", level: 90 },
@@ -9,7 +11,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="section skills-section">
+    <section id="skills" className="section skills-section fade-up">
       <h1>Skills</h1>
       <div className="skills-container">
         {skills.map((skill) => (

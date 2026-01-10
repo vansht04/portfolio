@@ -1,6 +1,8 @@
+"use client";
+
 export default function ResumePage() {
   return (
-    <section className="section">
+    <section id="resume" className="section fade-up">
       <h1>Resume</h1>
       <p>Feel free to download a copy of my resume below</p>
 

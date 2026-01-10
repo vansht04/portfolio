@@ -1,43 +1,36 @@
+"use client";
+import { FaLaptopCode, FaUsers, FaLightbulb, FaProjectDiagram } from "react-icons/fa";
+
 export default function About() {
   return (
-    <section className="section about-section">
-      {/* Page Title */}
-      <h1 className="section-title">About Me</h1>
-
-      {/* Intro */}
-      <p className="about-intro">
-        Hello! I’m Vansh, a software engineer passionate about building clean, maintainable, and scalable web applications. 
-        I enjoy learning new technologies and creating products that have a real impact.
+    <section id="about" className="section about-section fade-up">
+      <h1 className="about-title">About Me</h1>
+      <p className="about-intro fade-up">
+        I'm a software engineer passionate about building clean, maintainable, and scalable applications. 
+        I enjoy learning new technologies and crafting products that make an impact.
       </p>
 
-      {/* Who I Am */}
-      <div className="about-card">
-        <h2>Who I Am</h2>
-        <p>
-          I specialize in full-stack development using modern technologies such as React, Next.js, Node.js, and TailwindCSS. 
-          I thrive on solving complex problems and delivering efficient, high-quality solutions.
-        </p>
-      </div>
-
-      {/* Core Strengths */}
-      <div className="about-card">
-        <h2>Core Strengths</h2>
-        <ul>
-          <li>Frontend Development: Modern UI/UX, responsive design</li>
-          <li>Backend Development: Scalable APIs and database design</li>
-          <li>Problem Solving: Writing clean, efficient, and optimized code</li>
-          <li>Collaboration: Working effectively in team environments</li>
-        </ul>
-      </div>
-
-      {/* Key Achievements */}
-      <div className="about-card">
-        <h2>Key Achievements</h2>
-        <ul>
-          <li>Developed and deployed my personal portfolio using Next.js and Vercel</li>
-          <li>Built several web applications as part of personal and freelance projects</li>
-          <li>Contributed to open-source projects on GitHub</li>
-        </ul>
+      <div className="about-cards">
+        <div className="about-card fade-up">
+          <div className="card-icon"><FaLaptopCode /></div>
+          <h2>Technical Skills</h2>
+          <p>Proficient in modern web technologies and building scalable apps.</p>
+        </div>
+        <div className="about-card fade-up">
+          <div className="card-icon"><FaUsers /></div>
+          <h2>Collaboration</h2>
+          <p>Strong team player with experience in agile development and mentorship.</p>
+        </div>
+        <div className="about-card fade-up">
+          <div className="card-icon"><FaLightbulb /></div>
+          <h2>Problem Solving</h2>
+          <p>Adept at analyzing complex problems and designing effective solutions.</p>
+        </div>
+        <div className="about-card fade-up">
+          <div className="card-icon"><FaProjectDiagram /></div>
+          <h2>Project Management</h2>
+          <p>Experienced in managing small to medium-sized projects efficiently.</p>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,14 @@
+"use client";
 import ProjectCard from "@/components/ProjectCard";
 
+interface Project {
+  title: string;
+  description: string;
+  link: string;
+}
+
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     { title: "Task Manager", description: "Full-stack task manager app", link: "#" },
     { title: "E-Commerce Store", description: "Next.js storefront with payments", link: "#" },
     { title: "Chat App", description: "Real-time chat app with WebSockets", link: "#" },
@@ -11,10 +18,17 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="section">
+    <section id="projects" className="section fade-up">
       <h1>Projects</h1>
       <div className="project-scroll">
-        {projects.map(p => <ProjectCard key={p.title} {...p} />)}
+        {projects.map((p) => (
+          <ProjectCard
+            key={p.title}
+            title={p.title}
+            description={p.description}
+            link={p.link}
+          />
+        ))}
       </div>
     </section>
   );
