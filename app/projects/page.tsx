@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 
 interface Project {
   title: string;
@@ -25,14 +26,9 @@ export default function Projects() {
           <div key={project.title} className="about-card fade-up">
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
+            <Link href={project.link} className="project-link" target="_blank">
               View Project
-            </a>
+            </Link>
           </div>
         ))}
       </div>
