@@ -8,8 +8,11 @@ export default function ResumePage() {
         Feel free to view or download a copy of my resume below.
       </p>
 
-      <div className="hero-buttons fade-up" style={{ marginTop: "2rem", justifyContent: "center" }}>
-        {/* View Resume: opens PDF */}
+      <div
+        className="hero-buttons fade-up"
+        style={{ marginTop: "2rem", justifyContent: "center" }}
+      >
+        {/* View Resume: opens PDF in new tab */}
         <a
           href="/resume.pdf"
           target="_blank"
@@ -19,7 +22,7 @@ export default function ResumePage() {
           View Resume
         </a>
 
-        {/* Download Resume: downloads PDF */}
+        {/* Download Resume */}
         <a
           href="/resume.pdf"
           download

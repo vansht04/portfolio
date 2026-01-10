@@ -39,7 +39,7 @@ export default function Home() {
               View Resume
             </a>
 
-            {/* Projects button opens in same tab */}
+            {/* Projects button */}
             <Link href="/projects" className="btn-secondary">
               View Projects
             </Link>

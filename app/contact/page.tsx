@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import SocialLinks from "@/components/SocialLinks";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,10 +22,13 @@ export default function Contact() {
         </form>
       ) : (
         <div className="success-message">
-          <h2>Thanks for reaching out! 👋</h2>
+          <h2>
+            Thanks for reaching out! 👋
+            <br />
+            Vansh will get back to you as soon as he can!
+          </h2>
         </div>
       )}
-      <SocialLinks />
     </section>
   );
 }
